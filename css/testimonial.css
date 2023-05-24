@@ -9,7 +9,7 @@ html{
 }
 
 /* HEADER */
-.up-top{
+    .up-top{
     padding: 1.5rem 6.67%;
     background-color: rgba(245, 238, 235, 1);
     }
@@ -201,6 +201,9 @@ html{
             display: flex;
             justify-content: space-between;
         }
+        .up-top h2{
+            font-size: 40px;
+        }
     }
 
     @media screen and (max-width:768px){
@@ -210,6 +213,18 @@ html{
         }
         footer p{
             font-size: 1.5rem;
+        }
+        .up-top h2{
+            font-size: 40px;
+        }
+        .up-top h2{
+            font-size: 30px;
+        }
+        .unit p{
+            font-size: 1rem;
+        }
+        .orisha{
+            display: none;
         }
     }
 
@@ -274,11 +289,11 @@ html{
 
     /* MIDDLE */
     .hire{
-        position: relative;
         padding: 5rem 6.67%;
         text-align: center;
         display: flex;
         justify-content: space-between;
+        gap: 2rem;
     }
     .client{
         display: flex;
@@ -363,39 +378,243 @@ html{
 
     /* ANIMATION */
 .anim{
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+}
+.orisha{
+    width: 47%;
+    height: 100%;
     margin: 0 auto;
 }
 .cap{
     position: absolute;
-    top: 4rem;
+    top: 0;
     left: 12%;
+    transition: transform 1s;
+    animation-name: cap;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-fill-mode: forward;
+}
+@keyframes cap {
+    10%{
+        top:-.5rem;
+        left: 13%;
+    }
+    20%{
+        top: -1rem;
+        left: 15%;
+    }
+    30%{
+        top: -.4rem;
+        left: 18%;
+    }
+    50%{
+        top: -.4rem;
+        left: 16%;
+        transform: rotate(-45deg);
+    }
+    60%{
+        top: 0;
+        left: 25%;
+        transform: rotate(60deg);
+    }
+    80%{
+        top: .5rem;
+        left: 20%;
+    }
+    100%{
+        top: 0;
+        left: 12%;
+    }
 }
 .head{
     position: absolute;
-    top: 5.6rem;
+    top: 1.5rem;
     left: 12%;
+    animation-name: head;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-fill-mode: forward;
+    animation-iteration-count: infinite;
+}
+@keyframes head{
+    10%{
+        left: 20%;
+    }
+    20%{
+        left: 25%;
+        top: 2rem;
+    }
+    30%{
+        top: 2.5rem;
+        left: 20%;
+    }
+    100%{
+        top: 1.5rem;
+        left: 12%;
+    }
 }
 .neck{
     position: absolute;
-    top: 9.5rem;
-    left: 13%;
+    top: 5.5rem;
+    left: 15%;
+    animation-name: neck;
+    animation-duration: 3s;
+    animation-fill-mode: forward;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes neck {
+    10%{
+        left: 17%;
+    }
+    20%{
+        left:25%;
+        top: 6rem;
+    }
+    30%{
+        left:30%;
+    }
+    60%{
+        left: 35%;
+    }
+    70%{
+       top:6rem;
+       left: 60%; 
+    }
+    80%{
+        left:30%;
+        top: 6rem;
+    }
+    100%{
+
+    }
 }
 .body{
     position: absolute;
-    top: 12rem;
-    left: 13%;
+    top: 8rem;
+    left: 15%;
+    animation-name: body;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forward;
+}
+@keyframes body{
+    10%{
+        left: 17%;
+    }
+    20%{
+        left: 20%;
+        top: 8.5rem;
+    }
+    30%{
+        left: 30%;
+    }
+    60%{
+        left: 35%;
+        top: 8.5rem;
+    }
+    70%{
+        left: 60%;
+        top: 15rem;
+     }
+     80%{
+        left:30%;
+
+     }
 }
 .limb{
     position: absolute;
-    left: 6%;
-    top: 9rem;
+    left: -.8rem;
+    top: 5.3rem;
+    animation-name: limb;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forward;
+}
+@keyframes limb{
+    10%{
+        left: -1rem;
+        top: 5.5rem;
+    }
+    20%{
+        left: -.9rem;
+        top: 5.3rem;
+    }
+    30%{
+        left: -1rem;
+        top: 4rem;
+    }
+    50%{
+        left: -.8rem;
+        top: 5.3rem;
+    }
+    60%{
+        left: -1rem;
+        top: 5.5rem;
+    }
+    80%{
+        left: -.9rem;
+        top: 5.3rem;
+    }
+    100%{
+        left:-.8rem;
+        top: 5.3rem;
+    }
+
 }
 .base{
     position: absolute;
-    left: 4rem;
-    top: 15.3rem;
+    left: -2rem;
+    top: 11.5rem;
+    animation-name: base;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-fill-mode: forward;
 }
-
+@keyframes base {
+    10%{
+        top: 12rem;
+        left:5rem;
+    }
+    20%{
+        top:11rem;
+        left:5rem;
+    }
+    30%{
+        left: 12rem;
+        top: 11.5rem;
+    }
+    50%{
+        left: 12.5rem;
+    }
+    60%{
+        top:9rem;
+        left:14rem;
+    }
+    80%{
+        left:3rem;
+        top: 10rem;
+    }
+    100%{
+        left:-1rem;
+        top: 11.5rem;
+    }
+}
+@media screen and (max-width:1000px){
+        .orisha{
+            display: none;
+        }
+        .touch{
+            width: 100%;
+        }
+}
 @media screen and (max-width:850px){
     .client{
         flex-direction: column;
@@ -420,10 +639,19 @@ html{
         margin: auto;
         width: 100%;
     }
+    .orisha{
+        display: none;
+    }
+    .touch h1{
+        font-size: 3rem;
+    }
+    .touch{
+        width: 50%;
+    }
 }
 @media screen and (min-width: 350px) and (max-width:680px){
     .touch h1{
-        font-size: 2.1rem;
+        font-size: 2rem;
     }
     .mid-top-btn{
         width: 100%;
